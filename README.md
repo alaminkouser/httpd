@@ -12,6 +12,16 @@ less resource.
 
 ## How to run
 
+### Development
+
 ```sh
-busybox httpd -f -p 8080 -h "home"
+busybox httpd -f -p 8080 -h "home" -vvv
 ```
+
+### Production
+
+```sh
+busybox http -f -p 127.0.0.1 -h "home"
+```
+
+The Use tools to config https.

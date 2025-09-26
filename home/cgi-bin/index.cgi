@@ -5,4 +5,6 @@ printf "\n\n"
 
 printf "METHOD: $REQUEST_METHOD\n"
 printf "REQUEST_URI: $REQUEST_URI\n"
-printf "PATH_INFO: ${REQUEST_URI%%\?*}"
+
+
+printf "PATH_NAME: ${REQUEST_URI%%\?*}"
