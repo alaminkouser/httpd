@@ -3,8 +3,13 @@
 printf "Content-Type: text/plain"
 printf "\n\n"
 
-printf "METHOD: $REQUEST_METHOD\n"
-printf "REQUEST_URI: $REQUEST_URI\n"
+PATH_NAME="${REQUEST_URI%%\?*}"
 
+echo $PATH_NAME
 
-printf "PATH_NAME: ${REQUEST_URI%%\?*}"
+case "$PATH_NAME" in
+  */) CGI_SCRIPT="./..${PATH_NAME}index.cgi"
+      
+      echo $CGI_SCRIPT
+      ;;
+esac
