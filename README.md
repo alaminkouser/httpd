@@ -12,6 +12,8 @@ less resource.
 
 ## How to run
 
+make sure to `chmod 700 ./home/cgi-bin/index.cgi`.
+
 ### Development
 
 ```sh
